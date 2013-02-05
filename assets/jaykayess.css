@@ -1,0 +1,104 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+div.slide {
+    height: 100%;
+    overflow: hidden;
+}
+
+div#home {
+    background-color: #f3f6fc;
+}
+
+@-webkit-keyframes anim_fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+div#logo {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    margin: 20px auto;
+    -webkit-animation: anim_fadein 2s ease 0s 1;
+}
+
+@-webkit-keyframes star_rotation {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(180deg); }
+}
+
+div#logo .star {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -webkit-animation: star_rotation 3s linear 0s infinite; 
+}
+
+@-webkit-keyframes logo_delay {
+    from { -webkit-transform: scale(0, 0); }
+    to { -webkit-transform: scale(0, 0); }
+}
+
+@-webkit-keyframes logo_zoom {
+    from { -webkit-transform: scale(0, 0); }
+    to { -webkit-transform: scale(1, 1); }
+}
+
+div#logo .logo {
+    position: absolute;
+    top: 275px;
+    left: 40px;
+    -webkit-animation: logo_delay 2s, logo_zoom 0.5s 2s;
+}
+
+@-webkit-keyframes ribbon_delay {
+    from { opacity: 0; }
+    to { opacity: 0; }
+}
+
+@-webkit-keyframes ribbon_fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+div#logo .ribbons {
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    -webkit-animation: ribbon_delay 2.25s, ribbon_fadein 0.5s 2.25s;
+}
+
+div#banner, div#nav {
+    display: none;
+    position: fixed;
+    top: 75%;
+    min-height: 100px;
+    width: 100%;
+}
+
+div#banner {
+    background: rgba(0,0,0,.7);
+}
+
+div#nav {
+    color: white;
+    font-size: 72px;
+    padding: 8px;
+}
+
+div#one {
+    background-color: blue;
+}
+
+div#two {
+    background-color: red;
+}
+
+div#three {
+    background-color: green;
+}
