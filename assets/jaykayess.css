@@ -24,6 +24,9 @@ div#logo {
     width: 800px;
     height: 800px;
     margin: 20px auto;
+}
+
+div#logo.playing {
     -webkit-animation: anim_fadein 2s ease 0s 1;
 }
 
@@ -36,6 +39,9 @@ div#logo .star {
     position: absolute;
     top: 0px;
     left: 0px;
+}
+
+div#logo.playing .star {
     -webkit-animation: star_rotation 3s linear 0s infinite; 
 }
 
@@ -53,6 +59,9 @@ div#logo .logo {
     position: absolute;
     top: 275px;
     left: 40px;
+}
+
+div#logo.playing .logo {
     -webkit-animation: logo_delay 2s, logo_zoom 0.5s 2s;
 }
 
@@ -70,6 +79,9 @@ div#logo .ribbons {
     position: absolute;
     top: 120px;
     left: 0px;
+}
+
+div#logo.playing .ribbons {
     -webkit-animation: ribbon_delay 2.25s, ribbon_fadein 0.5s 2.25s;
 }
 
