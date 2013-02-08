@@ -1,13 +1,13 @@
 (function($){
 
     $(document).ready(function(){
-        if ( navigator.userAgent.match(/msie/i) ) {
-            $('#logo').addClass('static');
-        } else {
-            $('#logo img').imagesloaded(function() {
+        $('#logo img').imagesLoaded(function() {
+            $('#logo').show();
+            if ( navigator.userAgent.match(/msie/i) ) {
+            } else {
                 $('#logo').addClass('playing');
             }
-        }
+        });
     });
 
 })(jQuery);

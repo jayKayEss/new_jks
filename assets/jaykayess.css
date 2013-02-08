@@ -24,6 +24,7 @@ div#logo {
     width: 800px;
     height: 800px;
     margin: 20px auto;
+    display: none;
 }
 
 div#logo.playing {
