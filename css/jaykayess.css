@@ -11,7 +11,7 @@ div.slide {
 }
 
 div#home {
-    background-color: #f3f6fc;
+    background-color: #fff;
 }
 
 @-webkit-keyframes anim_fadein {
@@ -21,8 +21,8 @@ div#home {
 
 div#logo {
     position: relative;
-    width: 800px;
-    height: 800px;
+    width: 500px;
+    height: 500px;
     margin: 20px auto;
     display: none;
 }
@@ -36,14 +36,16 @@ div#logo.playing {
     to { -webkit-transform: rotate(180deg); }
 }
 
-div#logo .star {
+div#logo img {
     position: absolute;
+    width: 500px;
+    height: 500px;
     top: 0px;
     left: 0px;
 }
 
 div#logo.playing .star {
-    -webkit-animation: star_rotation 3s linear 0s infinite; 
+    -webkit-animation: star_rotation 10s linear 0s infinite; 
 }
 
 @-webkit-keyframes logo_delay {
@@ -54,12 +56,6 @@ div#logo.playing .star {
 @-webkit-keyframes logo_zoom {
     from { -webkit-transform: scale(0, 0); }
     to { -webkit-transform: scale(1, 1); }
-}
-
-div#logo .logo {
-    position: absolute;
-    top: 275px;
-    left: 40px;
 }
 
 div#logo.playing .logo {
@@ -76,32 +72,38 @@ div#logo.playing .logo {
     to { opacity: 1; }
 }
 
-div#logo .ribbons {
-    position: absolute;
-    top: 120px;
-    left: 0px;
-}
-
+div#navigation, 
 div#logo.playing .ribbons {
     -webkit-animation: ribbon_delay 2.25s, ribbon_fadein 0.5s 2.25s;
 }
 
-div#banner, div#nav {
-    display: none;
+div#navigation {
     position: fixed;
-    top: 75%;
-    min-height: 100px;
     width: 100%;
+    position: fixed;
+    margin: 0;
+    bottom: 0;
+    background-color: #666;
+    z-index: 999;
+    color: #fff;
+    border-radius: 0;
+}
+
+div#navigation li a {
+    color: #ccc;
+}
+
+div#navigation li a:hover {
+    background-color: #666;
+    color: #fff;
+}
+
+div#navigation li.active a {
+    color: #fff;
 }
 
 div#banner {
     background: rgba(0,0,0,.7);
-}
-
-div#nav {
-    color: white;
-    font-size: 72px;
-    padding: 8px;
 }
 
 div#one {
